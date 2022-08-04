@@ -1,5 +1,3 @@
-import json
-
 from kivy.app import App
 from kivy.uix.button import Button
 from kivy.uix.boxlayout import BoxLayout
@@ -38,7 +36,7 @@ class HBoxLayoutExample(App):
             blueScore += 1
             instance.text = str(blueScore)
             data={'c': 'b', 'd': blueScore}
-        requests.post('http://172.16.2.88:4567/score', json=data)
+        requests.post('http://172.16.5.240:4567/score', json=data)
 
     def on_press_button_blue(self, instance):
         print('Вы нажали на синюю кнопку!')
